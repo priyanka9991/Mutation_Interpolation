@@ -8,7 +8,11 @@ The sparse representation of mutation across datasets hinders predictive model p
 
 # Scripts
 
-
+1. mutation_del_interpolation.py - Generate interpolated mutation data. The parameter rounds (in line 89) determines the maximum number of iterations to run the algorithm. For example, when rounds=4, four different interpolated mutation data will be saved for rounds = 1, 2, 3 and 4.
+2. lgbm prediction - Train and evaluate LightGBM model on the interpolated data.
+3. dnn_prediction.py - Trains and evaluate neural network models on the interpolated data. When the parameter single_network=True, DNN model with single subnetwork is trained; when single_network=False, DNN model with double network is trained.  
+4. multiomics_image.py - Generate IGTD images from tabular mutation data.
+5. Multi_channel_prediction.py  - Trains and evaluates IGTD model on images generated from mutation data.
 
 
 
